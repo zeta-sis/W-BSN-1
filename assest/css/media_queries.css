@@ -1,0 +1,51 @@
+
+@media (max-width: 575px) { 
+header .slogan {letter-spacing: 0.08em;}
+.main_hero  .herobox {max-width: 510px; padding:26px 8px 16px 30px;margin:40px 0 0 0;}
+.brand_nav .nav .nav-item a {font-size: 18px;text-align: center;padding: 4px 17px;letter-spacing: 0.04em;font-weight: 300;}
+.main_brand_box .heraeus,.main_brand_box .wieland {padding: 36px 47px 24px 47px;}
+.main_brand_box .heraeus_box p.contact, .main_brand_box .wieland_box p.contact{padding: 12px 40px 0 16px !important;}
+.heraeus_box,.wieland_box {}
+.wieland_box .brand_nav .nav .nav-item a {font-size:15px;text-align: center;padding:4px 5px; letter-spacing: 0; font-weight: 300;}
+.brand_cats .cats .items a{font-size: 14px;color: #272c2f;}
+.wieland_box {height: 341px;}
+.wieland_product_cats {bottom: 24px;}
+.zetasis{text-align: left} 
+.alloy-list li a {font-size: 16px;padding: 6px 4px;}
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) { 
+.main_hero {height:382px;}
+.main_hero .herobox {max-width: 398px;}
+.main_hero  .herobox {max-width: 510px; padding:26px 38px 16px 30px;margin:40px 0 0 0;}
+.main_brand_box .heraeus,.main_brand_box .wieland {height:220px;}
+.brand_nav .nav .nav-item a {font-size: 18px;text-align: center;padding:8px 28px;letter-spacing: 0.04em;font-weight: 300;}
+.heraeus_box,.wieland_box {height: 270px;}
+.main_brand_box .heraeus_box p.contact,.main_brand_box .wieland_box p.contact {padding: 12px 118px 0 36px !important;}
+.zetasis{text-align: left} 
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) { 
+
+.heraeus_box, .wieland_box {height: 330px;}
+.brand_nav .nav .nav-item a {font-size: 18px;text-align: center;padding:8px 48px;letter-spacing: 0.04em;font-weight: 300;}
+.zetasis{text-align: left} 
+
+ }
+
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+	header .slogan {letter-spacing: 0.35em;} 
+.brand_nav .nav .nav-item a {font-size: 18px;text-align: center;padding:8px 28px;letter-spacing: 0.04em;font-weight: 300;}
+.zetasis{text-align: left} 
+ }
+
+@media (min-width: 1200px) { 
+
+header .slogan {text-align: right !important;letter-spacing: 0.35em;padding-top:32px;padding-right: 12px;  background: none; color: #525b61; margin: auto;} 
+.sticky{width:60px;height: 48px;position: fixed;top:0;z-index: 100;left:54.80%; margin-left: -624px;} 
+.main_brand_box .heraeus, .main_brand_box .wieland {height: 336px;}
+}
+
