@@ -1,0 +1,264 @@
+html, body { height: 100%; width: 100%; margin: 0; font-size: 0.96rem; font-family: 'Archivo Narrow', sans-serif;
+}
+
+h1 { color: #000; }
+p { font-size: 1.2rem; font-family: 'Roboto', sans-serif; }
+p a:after {content: '\f360'; font-family: "Font Awesome 5 Free"; font-weight: 900;font-size: 13px; margin-left: 5px; }
+
+a
+  {
+    -webkit-transition: background-color 300ms linear; -ms-transition: background-color 300ms linear;
+    color: #ce181e; transition: background-color 300ms linear; transition:all 0.3s ease;
+  }
+
+a:hover
+  {
+    -webkit-transition: background-color 300ms linear; -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;  transition:all 0.3s ease; 
+  }
+
+button
+  {
+   cursor:  pointer; color: #000;
+   -webkit-transition: background-color 300ms linear; -ms-transition: background-color 300ms linear;
+   transition: background-color 300ms linear; transition:all 0.3s ease;
+  }
+
+button:hover
+  {
+  -webkit-transition: background-color 300ms linear; -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear; transition:all 0.3s ease; 
+  }
+
+
+
+
+/*************** SKELETON */
+/* Defaults */
+  .img-100 { width: 100% }
+  .no-margin {margin-right: 0 !important;margin-left: 0 !important;}
+  .no-padding {padding-right: 0 !important;padding-left: 0 !important;}
+  .no-padding-left {padding-left: 0 !important;}  
+  .no-padding-right {padding-right: 0 !important;}
+  .text-align-right { text-align:right;}    
+  .text-align-left { text-align:left; align-items: right;}   
+  .h1-default {width: 100%;}
+  .fa-phone{transform: rotate(138deg);}
+  .navbar-brand {margin-right:0;padding-top: 0;}
+
+
+
+/* HEADER */
+.header-container {padding: 24px 0; background: black; }
+.header-container > .row{ max-width: 1360px; margin: auto; }
+.header-container .logo {width: 100%;display: block;}
+.header-container .logo img{width:100%;display: block;}
+
+
+/* HEADER END */
+
+
+
+/* NAV */
+/* DESKTOP NAVIGATION */
+/* ----- DEFAULTS ----- */
+#primaryNav {width: 100%;width: 100%;z-index: 100; position: relative;}
+#primaryNav ul {padding: 0;}
+#primaryNav ul li {position: relative; list-style: none;}
+#primaryNav ul li a {color: #afafaf; font-size: 18px; font-weight: bold;display: block; white-space: pre;}
+#primaryNav ul li a:hover {color:#dbdbdb; text-decoration: none;}
+#primaryNav .nav { justify-content: center; flex-grow: 1; display: flex; align-items: center; float: right; }
+#primaryNav .nav .sub-menu { background:#000; visibility: hidden; position: absolute; opacity: 0;}
+#primaryNav .nav .sub-menu li {padding:6px 28px 6px 28px;}
+#primaryNav .nav .sub-menu a {font-size: 16px;}
+#primaryNav .nav .sub-menu .closeLevel {display: none;}
+
+/* ----- LEVEL 1 ----- */
+#primaryNav .nav > li {display: flex; border-right:1px solid #555; position: relative;}
+#primaryNav .nav > li:first-child {border-left:1px solid #555}
+#primaryNav .nav > li > a {padding:8px 20px 8px 20px; color: #afafaf; font-size: 22px; font-weight: bold; background: #000;}
+#primaryNav .nav > .menu-item-has-children:before 
+  {
+    content: '\f107'; font-family: "Font Awesome 5 Free"; font-weight: 900;
+    right: 8px; top: 15px;font-size: 12px;position: absolute;color:#afafaf;
+  }
+#primaryNav .nav > .menu-item-has-children > a {padding:8px 22px 8px 20px}
+
+
+/* ----- LEVEL 2 ----- */
+#primaryNav .nav > li > .sub-menu 
+  {
+    padding:14px 20px 14px 0; min-width: 240px; top: 100%; transition: all 180ms ease-in-out !important;
+  }
+#primaryNav .nav > li:hover > .sub-menu{color:#dbdbdb;visibility: visible; opacity: 1;}
+#primaryNav .nav .sub-menu li.menu-item-has-children:before 
+  {
+    content: '\f105'; font-family: "Font Awesome 5 Free"; font-weight: 900;
+    right:10px; top:10px; font-size: 12px;position: absolute;color:#afafaf;
+  }
+
+
+/* ----- LEVEL 3 ----- */
+#primaryNav .nav .sub-menu .sub-menu
+  {
+    border-left: 1px solid red; padding: 10px 0 14px 0; min-height: 102px;
+    width: 100%; top:0; left: 100%;transition: all 550ms ease-out !important;
+  }
+#primaryNav .nav .sub-menu li:hover > .sub-menu  { visibility: visible; opacity: 1; transition: all 180ms ease-in !important;}
+/* DESKTOP NAVIGATION */
+
+/* MOBI MENU NAV */
+/* ----- DEFAULTS ----- */
+#mobiNav
+  {
+    width:334px; height: 100%; position: fixed; top: 0; left:-100%; display: none;
+    z-index: 100; overflow: scroll; background:#000; transition: ease-in-out 0.4s;
+  }
+#mobiNav ul {padding:20px 0 0 14px;}
+#mobiNav ul ul {padding:20px 0 0 14px;}
+#mobiNav ul li {position: relative; list-style: none;}
+#mobiNav ul li a {color: #afafaf; font-size: 18px; font-weight: bold;display: block; white-space: pre;}
+#mobiNav ul li a:hover {color:#dbdbdb; text-decoration: none;}
+#mobiNav .closeLevel {padding:6px 28px 4px 28px !important; font-weight: bold;  }
+.mobi-nav-bg
+  {
+    position: fixed; background: rgba(0, 0, 0, 0.7); width: 100%; height: 0; top: 0; display: none;
+    bottom: 0; left: 0; right: 0; opacity: 0; transition: opacity 0.4s ease-in-out;
+  }
+.pushNavIsOpen .mobi-nav-bg { height: 100%; opacity: 1; }
+.closeLevel {  background:#afafaf }
+
+/* ----- LEVEL 1 ----- */
+#mobiNav .nav > li {display: block; width: 100%;}
+#mobiNav .nav > li > a 
+  {
+    padding:14px 20px 12px 36px; display: block; color: #afafaf; font-size: 18px; 
+    font-weight: bold; background: #000;
+  }
+
+/* ----- LEVEL 2 ----- */
+#mobiNav .nav > li > .sub-menu
+  {
+   width: 320px; height: 100%; position: fixed; top: 0; left: -320px; padding: 0;
+   z-index: 100; overflow: scroll; background:#000; transition: ease-in-out 0.4s;
+  }
+#mobiNav .nav > li:hover > .sub-menu {}
+#mobiNav .nav .sub-menu li {padding:10px 28px 6px 28px; cursor: pointer;}
+
+
+/* ----- LEVEL 3 ----- */
+#mobiNav .nav > li > .sub-menu > li > .sub-menu 
+  {
+   width: 320px; height: 100%; position: fixed; top: 0; left: -320px; padding: 0;
+   z-index: 100; overflow: scroll; background:#000; transition: ease-in-out 0.4s;
+  }
+#mobiNav .nav .sub-menu li:hover > .sub-menu  {}
+
+
+/* ----- OPEN CONTANIERS ----- */
+#mobiNav.isOpen, 
+#mobiNav .nav > li > .isOpen,
+#mobiNav .nav > li > .sub-menu > li > .isOpen {left: 0;}
+
+
+/* ----- MOBI MENU HAMBURGER ----- */
+.hamburger {display:none;}
+.ham-but 
+  {
+    width:32px; height:32px; z-index: 1000; transition-duration: 0.5s; float: right; position: relative;
+  }
+
+.ham-but .icon-left 
+  {
+    width: 16px; height: 4px; top:12px; left: 0px;
+    transition-duration: 0.5s; position: absolute; background-color: #afafaf;
+  }
+
+.ham-but .icon-left:before 
+  {
+   width: 16px; height: 4px; top:-12px;  transition-duration: 0.5s;
+   position: absolute; background-color: #afafaf; content: "";
+  }
+
+.ham-but .icon-left:after 
+  {
+    width: 16px; height: 4px; top: 13px; background-color: #afafaf;
+    transition-duration: 0.5s; position: absolute;  content: "";
+  }
+
+.ham-but .icon-left:hover { cursor: pointer; }
+
+.ham-but .icon-right 
+  {
+    width: 16px; height: 4px; top:12px; left: 16px;
+    transition-duration: 0.5s; position: absolute; background-color: #afafaf;
+  }
+
+.ham-but .icon-right:before 
+  {
+    width: 16px; height: 4px; top: -12px; position: absolute;
+    transition-duration: 0.5s; background-color: #afafaf; content: "";
+  }
+
+.ham-but .icon-right:after 
+  {
+    width: 16px; height: 4px; top: 13px;
+    transition-duration: 0.5s; position: absolute;  background-color: #afafaf; content: "";
+  }
+
+/* ---------- OPENED ---------- */
+.ham-but.burgerOpened .icon-left { transition-duration: 0.5s; background: transparent; }
+
+.ham-but.burgerOpened .icon-left:before 
+  {
+  -webkit-transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+          transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+  }
+
+.ham-but.burgerOpened .icon-left:after 
+  {
+  -webkit-transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+          transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+  }
+.ham-but.burgerOpened .icon-right  { transition-duration: 0.5s; background: transparent; }
+
+.ham-but.burgerOpened .icon-right:before 
+  {
+  -webkit-transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+          transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+  }
+
+.ham-but.burgerOpened .icon-right:after 
+  {
+  -webkit-transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+          transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+  }
+.ham-but:hover { cursor: pointer; }
+/* MOBILE NAV END */
+/* NAV END*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
